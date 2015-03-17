@@ -1,4 +1,4 @@
-<div class="ui-select-container ui-select-bootstrap dropdown" ng-class="{open: $select.open}">
+<div class="ui-select-container ui-select-bootstrap dropdown" ng-class="{open: $select.open}" ng-switch="$select.inputName">
   <div class="ui-select-match"></div>
   <input type="text" autocomplete="off" tabindex="-1"
          aria-expanded="true"
@@ -8,6 +8,7 @@
          class="form-control ui-select-search"
          placeholder="{{$select.placeholder}}"
          ng-model="$select.search"
-         ng-show="$select.searchEnabled && $select.open">
+         ng-show="$select.searchEnabled && $select.open"
+         name="{{$select.inputName}}">
   <div class="ui-select-choices"></div>
 </div>

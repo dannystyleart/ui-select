@@ -77,7 +77,10 @@ uis.directive('uiSelectMultiple', ['uiSelectMinErr','$timeout', function(uiSelec
 
       //Input that will handle focus
       $select.focusInput = $select.searchInput;
-
+      
+      // Possibility to use an input name
+      $select.inputName = attrs.inputName || null;
+      
       //From view --> model
       ngModel.$parsers.unshift(function () {
         var locals = {},

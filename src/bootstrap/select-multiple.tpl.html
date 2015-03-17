@@ -1,6 +1,7 @@
 <div class="ui-select-container ui-select-multiple ui-select-bootstrap dropdown form-control" ng-class="{open: $select.open}">
   <div>
     <div class="ui-select-match"></div>
+    
     <input type="text"
            autocomplete="off" 
            autocorrect="off" 
@@ -14,7 +15,9 @@
            ng-model="$select.search"
            role="combobox"
            aria-label="{{ $select.baseTitle }}"
-           ondrop="return false;">
+           ondrop="return false;"
+           name="{{$select.inputName}}">
+    
   </div>
   <div class="ui-select-choices"></div>
 </div>
